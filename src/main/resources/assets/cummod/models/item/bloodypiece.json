@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "cummod:items/bloox"
+    "layer0": "cummod:items/blob1"
   }
 }

@@ -17,6 +17,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.monster.Spider;
+import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.CaveSpider;
 import net.minecraft.world.entity.animal.Animal;
@@ -41,9 +42,11 @@ import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.cummod.procedures.BladeThisEntityKillsAnotherOneProcedure;
+import net.mcreator.cummod.init.CummodModParticleTypes;
 import net.mcreator.cummod.init.CummodModEntities;
 
 @Mod.EventBusSubscriber
@@ -61,6 +64,7 @@ public class BladeEntity extends Zombie {
 		super(type, world);
 		xpReward = 6;
 		setNoAi(false);
+		setPersistenceRequired();
 	}
 
 	@Override
@@ -77,21 +81,27 @@ public class BladeEntity extends Zombie {
 		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, AbstractGolem.class, false, false));
 		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Spider.class, false, false));
 		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, CaveSpider.class, false, false));
-		this.goalSelector.addGoal(7, new LeapAtTargetGoal(this, (float) 0.7));
-		this.goalSelector.addGoal(8, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(9, new MeleeAttackGoal(this, 1.2, false) {
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Slime.class, false, false));
+		this.goalSelector.addGoal(8, new LeapAtTargetGoal(this, (float) 0.7));
+		this.goalSelector.addGoal(9, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(10, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
-		this.goalSelector.addGoal(10, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(11, new HurtByTargetGoal(this).setAlertOthers());
+		this.goalSelector.addGoal(11, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(12, new HurtByTargetGoal(this).setAlertOthers());
 	}
 
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
 	}
 
 	@Override
@@ -128,6 +138,21 @@ public class BladeEntity extends Zombie {
 		BladeThisEntityKillsAnotherOneProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
 	}
 
+	public void aiStep() {
+		super.aiStep();
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+		for (int l = 0; l < 2; ++l) {
+			double x0 = x + 0.5 + (random.nextFloat() - 0.5) * 1.9D;
+			double y0 = y + 1.2 + (random.nextFloat() - 0.5) * 1.9D;
+			double z0 = z + 0.5 + (random.nextFloat() - 0.5) * 1.9D;
+			world.addParticle((SimpleParticleType) (CummodModParticleTypes.DROPLET.get()), x0, y0, z0, 0, 0, 0);
+		}
+	}
+
 	public static void init() {
 		SpawnPlacements.register(CummodModEntities.BLADE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
@@ -137,7 +162,7 @@ public class BladeEntity extends Zombie {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.5);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.4);
 		builder = builder.add(Attributes.MAX_HEALTH, 20);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 6);

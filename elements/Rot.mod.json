@@ -6,7 +6,7 @@
     "pools": [
       {
         "minrolls": 1,
-        "maxrolls": 2,
+        "maxrolls": 1,
         "minbonusrolls": 1,
         "maxbonusrolls": 1,
         "hasbonusrolls": false,
@@ -30,7 +30,7 @@
             "item": {
               "value": "CUSTOM:Bloodypiece"
             },
-            "weight": 7,
+            "weight": 13,
             "minCount": 1,
             "maxCount": 9,
             "minEnchantmentLevel": 0,

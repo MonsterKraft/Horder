@@ -27,6 +27,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.cummod.init.CummodModTabs;
+import net.mcreator.cummod.init.CummodModParticleTypes;
 import net.mcreator.cummod.init.CummodModItems;
 import net.mcreator.cummod.init.CummodModEntities;
 import net.mcreator.cummod.init.CummodModBlocks;
@@ -53,7 +54,7 @@ public class CummodMod {
 		CummodModEntities.REGISTRY.register(bus);
 
 		CummodModBiomes.REGISTRY.register(bus);
-
+		CummodModParticleTypes.REGISTRY.register(bus);
 	}
 
 	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder,

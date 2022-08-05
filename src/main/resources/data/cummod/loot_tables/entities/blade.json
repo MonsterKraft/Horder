@@ -2,10 +2,7 @@
   "type": "minecraft:entity",
   "pools": [
     {
-      "rolls": {
-        "min": 1,
-        "max": 2
-      },
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
@@ -24,7 +21,7 @@
         {
           "type": "minecraft:item",
           "name": "cummod:bloodypiece",
-          "weight": 7,
+          "weight": 13,
           "functions": [
             {
               "function": "set_count",

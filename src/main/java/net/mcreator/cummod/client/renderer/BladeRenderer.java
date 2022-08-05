@@ -10,7 +10,7 @@ import net.mcreator.cummod.client.model.Modelcustom_model;
 
 public class BladeRenderer extends MobRenderer<BladeEntity, Modelcustom_model<BladeEntity>> {
 	public BladeRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modelcustom_model(context.bakeLayer(Modelcustom_model.LAYER_LOCATION)), 1f);
+		super(context, new Modelcustom_model(context.bakeLayer(Modelcustom_model.LAYER_LOCATION)), 2f);
 	}
 
 	@Override

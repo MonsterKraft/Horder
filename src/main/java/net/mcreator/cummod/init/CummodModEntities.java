@@ -25,9 +25,7 @@ public class CummodModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, CummodMod.MODID);
 	public static final RegistryObject<EntityType<BladeEntity>> BLADE = register("blade",
 			EntityType.Builder.<BladeEntity>of(BladeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(164)
-					.setUpdateInterval(3).setCustomClientFactory(BladeEntity::new)
-
-					.sized(1f, 3f));
+					.setUpdateInterval(3).setCustomClientFactory(BladeEntity::new).fireImmune().sized(1.5f, 3f));
 	public static final RegistryObject<EntityType<BloodEntity>> BLOOD = register("blood",
 			EntityType.Builder.<BloodEntity>of(BloodEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(3).setCustomClientFactory(BloodEntity::new)

@@ -72,6 +72,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -287,6 +303,22 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "blood"
+    },
+    {
+      "name": "Droplet",
+      "type": "particle",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "droplet"
+    },
+    {
+      "name": "MeatExpoloton",
+      "type": "particle",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meat_expoloton"
     }
   ],
   "variable_elements": [],
