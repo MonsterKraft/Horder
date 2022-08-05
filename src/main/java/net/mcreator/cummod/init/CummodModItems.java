@@ -37,6 +37,8 @@ public class CummodModItems {
 	public static final RegistryObject<Item> MEATTREE_FENCE_GATE = block(CummodModBlocks.MEATTREE_FENCE_GATE, CreativeModeTab.TAB_REDSTONE);
 	public static final RegistryObject<Item> MEATTREE_PRESSURE_PLATE = block(CummodModBlocks.MEATTREE_PRESSURE_PLATE, CreativeModeTab.TAB_REDSTONE);
 	public static final RegistryObject<Item> MEAT = block(CummodModBlocks.MEAT, CummodModTabs.TAB_HORD);
+	public static final RegistryObject<Item> BLOOD = REGISTRY.register("blood_spawn_egg",
+			() -> new ForgeSpawnEggItem(CummodModEntities.BLOOD, -5043959, -11203315, new Item.Properties().tab(CummodModTabs.TAB_HORD)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

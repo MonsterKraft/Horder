@@ -16,6 +16,8 @@
   "block.cummod.meat": "Ds",
   "block.cummod.meattree_slab": "Meattree Slab",
   "entity.cummod.blade": "Blader",
+  "item.cummod.blood_spawn_egg": "Blood Spawn Egg",
+  "entity.cummod.blood": "Blood",
   "block.cummod.grass": "Grass",
   "block.cummod.meattree_log": "Meattree Log"
 }
