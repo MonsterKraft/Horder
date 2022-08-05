@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "cummod:blocks/meattree_planks",
+    "particle": "cummod:blocks/meattree_planks"
+  }
+}

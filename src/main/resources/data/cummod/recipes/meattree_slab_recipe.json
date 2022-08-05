@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "cummod:meattree_planks"
+    },
+    "1": {
+      "item": "cummod:meattree_planks"
+    },
+    "2": {
+      "item": "cummod:meattree_planks"
+    }
+  },
+  "result": {
+    "item": "cummod:meattree_slab",
+    "count": 6
+  }
+}

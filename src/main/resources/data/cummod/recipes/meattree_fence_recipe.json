@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "cummod:meattree_planks"
+    },
+    "1": {
+      "item": "minecraft:stick"
+    },
+    "2": {
+      "item": "cummod:meattree_planks"
+    },
+    "3": {
+      "item": "cummod:meattree_planks"
+    },
+    "4": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "cummod:meattree_planks"
+    }
+  },
+  "result": {
+    "item": "cummod:meattree_fence",
+    "count": 3
+  }
+}

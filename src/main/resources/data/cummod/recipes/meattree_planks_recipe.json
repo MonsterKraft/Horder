@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:meattree_log"
+    }
+  ],
+  "result": {
+    "item": "cummod:meattree_planks",
+    "count": 4
+  }
+}

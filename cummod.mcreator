@@ -1,0 +1,336 @@
+{
+  "mod_elements": [
+    {
+      "name": "Blade",
+      "type": "livingentity",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blade"
+    },
+    {
+      "name": "BladeThisEntityKillsAnotherOne",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blade_this_entity_kills_another_one",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rot",
+      "type": "loottable",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rot"
+    },
+    {
+      "name": "Hord",
+      "type": "tab",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hord"
+    },
+    {
+      "name": "Bloodypiece",
+      "type": "item",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bloodypiece"
+    },
+    {
+      "name": "BloodypiecePlayerFinishesUsingItem",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bloodypiece_player_finishes_using_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloodyBone",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bloody_bone"
+    },
+    {
+      "name": "MeattreeWood",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_wood"
+    },
+    {
+      "name": "MeattreeLog",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_log"
+    },
+    {
+      "name": "MeattreePlanks",
+      "type": "block",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_planks"
+    },
+    {
+      "name": "MeattreeLeaves",
+      "type": "block",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_leaves"
+    },
+    {
+      "name": "MeattreeStairs",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_stairs"
+    },
+    {
+      "name": "MeattreeSlab",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_slab"
+    },
+    {
+      "name": "MeattreeFence",
+      "type": "block",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_fence"
+    },
+    {
+      "name": "MeattreeFenceGate",
+      "type": "block",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_fence_gate"
+    },
+    {
+      "name": "MeattreePressurePlate",
+      "type": "block",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_pressure_plate"
+    },
+    {
+      "name": "MeattreeButton",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_button"
+    },
+    {
+      "name": "MeattreeItemsTag",
+      "type": "tag",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_items_tag"
+    },
+    {
+      "name": "MeattreeWoodRecipe",
+      "type": "recipe",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_wood_recipe"
+    },
+    {
+      "name": "MeattreePlanksRecipe",
+      "type": "recipe",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_planks_recipe"
+    },
+    {
+      "name": "MeattreeStairsRecipe",
+      "type": "recipe",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_stairs_recipe"
+    },
+    {
+      "name": "MeattreeSlabRecipe",
+      "type": "recipe",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_slab_recipe"
+    },
+    {
+      "name": "MeattreeFenceRecipe",
+      "type": "recipe",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_fence_recipe"
+    },
+    {
+      "name": "MeattreeFenceGateRecipe",
+      "type": "recipe",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_fence_gate_recipe"
+    },
+    {
+      "name": "MeattreePressurePlateRecipe",
+      "type": "recipe",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_pressure_plate_recipe"
+    },
+    {
+      "name": "MeattreeButtonRecipe",
+      "type": "recipe",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_button_recipe"
+    },
+    {
+      "name": "MeattreeStickRecipe",
+      "type": "recipe",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meattree_stick_recipe"
+    },
+    {
+      "name": "Bones",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bones",
+      "path": "~/biomes"
+    },
+    {
+      "name": "Grass",
+      "type": "block",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grass",
+      "path": "~/biomes"
+    },
+    {
+      "name": "Meat",
+      "type": "biome",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meat",
+      "path": "~/biomes"
+    },
+    {
+      "name": "Ds",
+      "type": "block",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meat",
+      "path": "~/biomes"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "block.cummod.meattree_planks": "Meattree Planks",
+      "block.cummod.meattree_fence": "Meattree Fence",
+      "block.cummod.meattree_fence_gate": "Meattree Fence Gate",
+      "block.cummod.meattree_wood": "Meattree Wood",
+      "biome.cummod.meat": "Meat",
+      "item.cummod.bloodypiece": "Bloodypiece",
+      "block.cummod.meattree_leaves": "Meattree Leaves",
+      "block.cummod.meattree_button": "Meattree Button",
+      "item.cummod.bloody_bone": "Bloody Bone",
+      "itemGroup.tabhord": "Hord",
+      "block.cummod.meattree_stairs": "Meattree Stairs",
+      "block.cummod.meattree_pressure_plate": "Meattree Pressure Plate",
+      "block.cummod.bones": "Bones",
+      "item.cummod.blade_spawn_egg": "Blader Spawn Egg",
+      "block.cummod.meat": "Ds",
+      "block.cummod.meattree_slab": "Meattree Slab",
+      "entity.cummod.blade": "Blader",
+      "block.cummod.grass": "Grass",
+      "block.cummod.meattree_log": "Meattree Log"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "biomes",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "cummod",
+    "modName": "CUMMOD",
+    "version": "1.0.0",
+    "author": "Alex, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.18.2",
+    "modElementsPackage": "net.mcreator.cummod",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202200120510
+}

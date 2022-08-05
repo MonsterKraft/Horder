@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "scull_kopiia"
+      },
+      "name": "default"
+    },
+    "fe": {
+      "map": {
+        "1": "scull_kopiia"
+      },
+      "name": "fe"
+    }
+  }
+}

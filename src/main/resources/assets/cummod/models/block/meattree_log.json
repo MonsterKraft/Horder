@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "cummod:blocks/meattree_log_top",
+    "up": "cummod:blocks/meattree_log_top",
+    "north": "cummod:blocks/meattree_log_side",
+    "east": "cummod:blocks/meattree_log_side",
+    "south": "cummod:blocks/meattree_log_side",
+    "west": "cummod:blocks/meattree_log_side",
+    "particle": "cummod:blocks/meattree_log_top"
+  }
+}

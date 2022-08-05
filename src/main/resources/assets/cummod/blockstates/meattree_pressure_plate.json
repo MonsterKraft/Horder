@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "cummod:block/meattree_pressure_plate"
+    },
+    "powered=true": {
+      "model": "cummod:block/meattree_pressure_plate_down"
+    }
+  }
+}

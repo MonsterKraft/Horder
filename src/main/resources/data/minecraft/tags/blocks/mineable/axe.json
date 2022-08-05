@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "cummod:meattree_wood",
+    "cummod:meattree_log",
+    "cummod:meattree_planks"
+  ]
+}

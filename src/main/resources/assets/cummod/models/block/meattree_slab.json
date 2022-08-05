@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "cummod:blocks/meattree_planks",
+    "top": "cummod:blocks/meattree_planks",
+    "side": "cummod:blocks/meattree_planks"
+  }
+}
