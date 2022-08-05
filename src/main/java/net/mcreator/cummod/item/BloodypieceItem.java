@@ -40,7 +40,7 @@ public class BloodypieceItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		BloodypiecePlayerFinishesUsingItemProcedure.execute(entity);
+		BloodypiecePlayerFinishesUsingItemProcedure.execute(world, x, y, z, entity);
 		return retval;
 	}
 }
