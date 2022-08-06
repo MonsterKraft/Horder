@@ -319,6 +319,70 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "meat_expoloton"
+    },
+    {
+      "name": "BloodKoghdaIghrokStalkivaietsiaSEtoiSushchnostiu",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_koghda_ighrok_stalkivaietsia_s_etoi_sushchnostiu",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloodPriObnovlieniiTaktaSushchnosti",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_pri_obnovlienii_takta_sushchnosti",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BladePriObnovlieniiTaktaSushchnosti",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blade_pri_obnovlienii_takta_sushchnosti",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],

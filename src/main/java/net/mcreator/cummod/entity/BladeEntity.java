@@ -16,11 +16,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.monster.Zombie;
-import net.minecraft.world.entity.monster.Spider;
-import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.monster.CaveSpider;
-import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.AbstractGolem;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
@@ -46,6 +42,7 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.cummod.procedures.BladeThisEntityKillsAnotherOneProcedure;
+import net.mcreator.cummod.procedures.BladePriObnovlieniiTaktaSushchnostiProcedure;
 import net.mcreator.cummod.init.CummodModParticleTypes;
 import net.mcreator.cummod.init.CummodModEntities;
 
@@ -75,23 +72,19 @@ public class BladeEntity extends Zombie {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Animal.class, false, false));
-		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Villager.class, false, false));
-		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, AbstractGolem.class, false, false));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Spider.class, false, false));
-		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, CaveSpider.class, false, false));
-		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Slime.class, false, false));
-		this.goalSelector.addGoal(8, new LeapAtTargetGoal(this, (float) 0.7));
-		this.goalSelector.addGoal(9, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(10, new MeleeAttackGoal(this, 1.2, false) {
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Villager.class, false, false));
+		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, AbstractGolem.class, false, false));
+		this.goalSelector.addGoal(4, new LeapAtTargetGoal(this, (float) 0.7));
+		this.goalSelector.addGoal(5, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(6, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
-		this.goalSelector.addGoal(11, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(12, new HurtByTargetGoal(this).setAlertOthers());
+		this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(8, new HurtByTargetGoal(this).setAlertOthers());
 	}
 
 	@Override
@@ -136,6 +129,12 @@ public class BladeEntity extends Zombie {
 	public void awardKillScore(Entity entity, int score, DamageSource damageSource) {
 		super.awardKillScore(entity, score, damageSource);
 		BladeThisEntityKillsAnotherOneProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		BladePriObnovlieniiTaktaSushchnostiProcedure.execute(this);
 	}
 
 	public void aiStep() {
