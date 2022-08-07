@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "cummod:items/xs"
+    "layer0": "cummod:items/meattyaxe"
   }
 }

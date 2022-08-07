@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "xs",
+    "texture": "meattyaxe",
     "customModelName": "Normal",
     "name": "Meatty Baton",
     "specialInfo": [],
