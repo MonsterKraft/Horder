@@ -14,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.cummod.item.MeattyBatonItem;
 import net.mcreator.cummod.item.BloodypieceItem;
 import net.mcreator.cummod.item.BloodyBoneItem;
 import net.mcreator.cummod.CummodMod;
@@ -39,6 +40,7 @@ public class CummodModItems {
 	public static final RegistryObject<Item> MEAT = block(CummodModBlocks.MEAT, CummodModTabs.TAB_HORD);
 	public static final RegistryObject<Item> BLOOD = REGISTRY.register("blood_spawn_egg",
 			() -> new ForgeSpawnEggItem(CummodModEntities.BLOOD, -5043959, -11203315, new Item.Properties().tab(CummodModTabs.TAB_HORD)));
+	public static final RegistryObject<Item> MEATTY_BATON = REGISTRY.register("meatty_baton", () -> new MeattyBatonItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
