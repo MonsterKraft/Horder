@@ -19,10 +19,10 @@ import com.mojang.blaze3d.vertex.PoseStack;
 // Made with Blockbench 4.3.1
 // Exported for Minecraft version 1.17 - 1.18 with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
+public class Modelblader_idle<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("cummod", "modelcustom_model"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("cummod", "modelblader_idle"), "main");
 	public final ModelPart Head;
 	public final ModelPart Body;
 	public final ModelPart L_L;
@@ -30,7 +30,7 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 	public final ModelPart L_A;
 	public final ModelPart R_A;
 
-	public Modelcustom_model(ModelPart root) {
+	public Modelblader_idle(ModelPart root) {
 		this.Head = root.getChild("Head");
 		this.Body = root.getChild("Body");
 		this.L_L = root.getChild("L_L");
@@ -44,7 +44,7 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 		PartDefinition partdefinition = meshdefinition.getRoot();
 		PartDefinition Head = partdefinition.addOrReplaceChild("Head", CubeListBuilder.create(), PartPose.offset(0.0F, -14.5F, 8.75F));
 		PartDefinition Skin2 = Head.addOrReplaceChild("Skin2", CubeListBuilder.create(),
-				PartPose.offsetAndRotation(1.4936F, -7.0071F, -3.6589F, 0.0F, -0.3054F, 0.0F));
+				PartPose.offsetAndRotation(1.4936F, -7.0071F, -3.6589F, 0.2182F, 0.6109F, 0.0F));
 		PartDefinition cube_r1 = Skin2.addOrReplaceChild("cube_r1",
 				CubeListBuilder.create().texOffs(23, 0).addBox(0.5F, -3.0F, -11.0F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(23, 20)
 						.addBox(4.0F, -3.0F, -11.0F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(52, 65)
@@ -58,10 +58,10 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 				PartPose.offsetAndRotation(5.5722F, 0.5071F, -7.4254F, 0.5672F, -0.48F, 0.0F));
 		PartDefinition cube_r3 = Skin2.addOrReplaceChild("cube_r3",
 				CubeListBuilder.create().texOffs(86, 16).addBox(0.0F, -1.5F, -2.5F, 1.0F, 3.0F, 7.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(5.0375F, 2.0071F, -2.0668F, -0.6545F, -0.48F, 0.0F));
+				PartPose.offsetAndRotation(5.0375F, 2.0071F, -2.0668F, -2.71F, -0.2052F, 0.1423F));
 		PartDefinition cube_r4 = Skin2.addOrReplaceChild("cube_r4",
-				CubeListBuilder.create().texOffs(52, 65).addBox(-0.883F, -4.6163F, -1.3962F, 1.0F, 6.0F, 3.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(5.4993F, 7.2071F, -2.9538F, -0.9048F, -0.4159F, 0.3886F));
+				CubeListBuilder.create().texOffs(52, 65).addBox(-2.3747F, -3.119F, -0.6514F, 1.0F, 6.0F, 3.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(7.6092F, 3.5106F, -8.5644F, -1.4426F, 0.2804F, -0.062F));
 		PartDefinition cube_r5 = Skin2.addOrReplaceChild("cube_r5",
 				CubeListBuilder.create().texOffs(74, 89).addBox(-0.4601F, 2.5F, 0.6439F, 1.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(23, 20)
 						.addBox(-0.4601F, -2.5F, -0.3561F, 1.0F, 5.0F, 5.0F, new CubeDeformation(0.0F)),
@@ -72,7 +72,7 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 						.addBox(-3.0F, -7.4727F, -0.226F, 6.0F, 6.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(38, 56)
 						.addBox(-3.5F, -6.9727F, -8.226F, 7.0F, 6.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(82, 81)
 						.addBox(-3.5F, -7.9727F, -7.226F, 7.0F, 8.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(73, 56)
-						.addBox(-1.5F, -1.9727F, -10.226F, 3.0F, 6.0F, 4.0F, new CubeDeformation(0.0F)),
+						.addBox(-1.5F, -1.9727F, -10.226F, 3.0F, 3.0F, 4.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(0.0F, -2.5273F, -3.524F));
 		PartDefinition cube_r6 = Scull.addOrReplaceChild("cube_r6",
 				CubeListBuilder.create().texOffs(28, 5).addBox(-1.5F, -0.5F, -0.5F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
@@ -87,17 +87,17 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 				CubeListBuilder.create().texOffs(71, 10).addBox(-1.0F, -0.5F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, -2.2227F, -8.976F, 0.8727F, 0.0F, 0.0F));
 		PartDefinition cube_r10 = Scull.addOrReplaceChild("cube_r10",
-				CubeListBuilder.create().texOffs(93, 26).addBox(-0.5F, -2.0F, -2.0F, 1.0F, 6.0F, 4.0F, new CubeDeformation(0.0F)),
+				CubeListBuilder.create().texOffs(93, 26).addBox(-0.5F, -2.0F, -2.0F, 1.0F, 3.0F, 4.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(-2.0F, 0.0273F, -8.226F, 0.0F, -0.48F, 0.0F));
 		PartDefinition cube_r11 = Scull.addOrReplaceChild("cube_r11",
-				CubeListBuilder.create().texOffs(38, 93).addBox(-0.5F, -2.0F, -2.0F, 1.0F, 6.0F, 4.0F, new CubeDeformation(0.0F)),
+				CubeListBuilder.create().texOffs(38, 93).addBox(-0.5F, -2.0F, -2.0F, 1.0F, 3.0F, 4.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(2.0F, 0.0273F, -8.226F, 0.0F, 0.48F, 0.0F));
 		PartDefinition cube_r12 = Scull.addOrReplaceChild("cube_r12",
 				CubeListBuilder.create().texOffs(23, 0).addBox(-0.5F, -0.5F, -2.0F, 2.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(-2.0F, 4.2773F, -8.176F, -0.0236F, -0.4449F, 0.2189F));
+				PartPose.offsetAndRotation(-2.0F, 1.2773F, -8.176F, -0.1109F, -0.4449F, 0.2189F));
 		PartDefinition cube_r13 = Scull.addOrReplaceChild("cube_r13",
 				CubeListBuilder.create().texOffs(23, 30).addBox(-1.5F, -0.5F, -2.0F, 2.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(2.0F, 4.2773F, -8.176F, -0.1109F, 0.4449F, -0.2189F));
+				PartPose.offsetAndRotation(2.0F, 1.2773F, -8.176F, -0.1109F, 0.4449F, -0.2189F));
 		PartDefinition cube_r14 = Scull.addOrReplaceChild("cube_r14",
 				CubeListBuilder.create().texOffs(89, 50).addBox(-1.0F, -1.0324F, -0.1005F, 2.0F, 3.0F, 6.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, -2.4727F, 3.524F, -1.4399F, 0.0F, 0.0F));
@@ -108,7 +108,7 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 				CubeListBuilder.create().texOffs(14, 15).addBox(-4.0F, -0.5F, -2.0F, 6.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(1.0F, 0.1273F, -4.726F, 0.2618F, 0.0F, 0.0F));
 		PartDefinition Skin = Head.addOrReplaceChild("Skin", CubeListBuilder.create(),
-				PartPose.offsetAndRotation(-1.4936F, -7.0071F, -3.6589F, 0.0F, 0.1745F, 0.0F));
+				PartPose.offsetAndRotation(-1.4936F, -7.0071F, -3.6589F, 0.1814F, -0.5542F, -0.0951F));
 		PartDefinition cube_r17 = Skin.addOrReplaceChild("cube_r17",
 				CubeListBuilder.create().texOffs(28, 7).addBox(-1.5F, -3.0F, -11.0F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(28, 10)
 						.addBox(-5.0F, -3.0F, -11.0F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(71, 0)
@@ -122,10 +122,10 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 				PartPose.offsetAndRotation(-5.5722F, 0.5071F, -7.4254F, 0.5672F, 0.48F, 0.0F));
 		PartDefinition cube_r19 = Skin.addOrReplaceChild("cube_r19",
 				CubeListBuilder.create().texOffs(16, 88).addBox(-1.0F, -1.5F, -2.5F, 1.0F, 3.0F, 7.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(-5.0375F, 2.0071F, -2.0668F, -0.6545F, 0.48F, 0.0F));
+				PartPose.offsetAndRotation(-5.0375F, 2.0071F, -2.0668F, -2.4365F, 0.2545F, -0.2215F));
 		PartDefinition cube_r20 = Skin.addOrReplaceChild("cube_r20",
-				CubeListBuilder.create().texOffs(71, 0).addBox(-0.2958F, -5.5238F, -1.993F, 1.0F, 6.0F, 3.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(-5.4993F, 7.2071F, -2.9538F, -1.1058F, 0.3685F, -0.4251F));
+				CubeListBuilder.create().texOffs(71, 0).addBox(0.3093F, -2.7937F, -2.6413F, 1.0F, 6.0F, 3.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-6.724F, 6.0308F, -5.792F, -1.313F, -0.106F, 0.0692F));
 		PartDefinition cube_r21 = Skin.addOrReplaceChild("cube_r21",
 				CubeListBuilder.create().texOffs(84, 91).addBox(-0.5399F, 2.5F, 0.6439F, 1.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(46, 35)
 						.addBox(-0.5399F, -2.5F, -0.3561F, 1.0F, 5.0F, 5.0F, new CubeDeformation(0.0F)),
@@ -162,8 +162,7 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 		PartDefinition cube_r30 = R_L.addOrReplaceChild("cube_r30",
 				CubeListBuilder.create().texOffs(71, 10).addBox(-1.0F, -3.6954F, -0.4277F, 2.0F, 4.0F, 9.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 11.4637F, -6.8358F, -1.6581F, 0.0F, 0.0F));
-		PartDefinition L_A = partdefinition.addOrReplaceChild("L_A", CubeListBuilder.create(),
-				PartPose.offsetAndRotation(7.0F, -13.5F, 9.5F, -1.1125F, 0.5813F, 0.5342F));
+		PartDefinition L_A = partdefinition.addOrReplaceChild("L_A", CubeListBuilder.create(), PartPose.offset(4.0F, -13.5F, 9.5F));
 		PartDefinition cube_r31 = L_A.addOrReplaceChild("cube_r31",
 				CubeListBuilder.create().texOffs(0, 56).addBox(-1.811F, -1.2373F, -2.6301F, 14.0F, 4.0F, 5.0F, new CubeDeformation(0.0F))
 						.texOffs(48, 50).addBox(7.189F, -0.2373F, -12.6301F, 6.0F, 2.0F, 13.0F, new CubeDeformation(0.0F)).texOffs(22, 80)
@@ -172,8 +171,7 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 						.addBox(7.189F, -0.2373F, -30.6301F, 2.0F, 2.0F, 6.0F, new CubeDeformation(0.0F)).texOffs(82, 59)
 						.addBox(7.189F, -0.2373F, -24.6301F, 4.0F, 2.0F, 6.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(1.0658F, 0.6795F, -1.4987F, 0.3899F, -0.6455F, 0.4508F));
-		PartDefinition R_A = partdefinition.addOrReplaceChild("R_A", CubeListBuilder.create(),
-				PartPose.offsetAndRotation(-6.0F, -13.5F, 9.5F, -1.0617F, -0.5065F, -0.6504F));
+		PartDefinition R_A = partdefinition.addOrReplaceChild("R_A", CubeListBuilder.create(), PartPose.offset(-4.0F, -13.5F, 9.5F));
 		PartDefinition cube_r32 = R_A.addOrReplaceChild("cube_r32",
 				CubeListBuilder.create().texOffs(62, 81).addBox(-11.189F, -0.2373F, -24.6301F, 4.0F, 2.0F, 6.0F, new CubeDeformation(0.0F))
 						.texOffs(0, 0).addBox(-16.189F, 0.7627F, -37.6301F, 9.0F, 0.0F, 35.0F, new CubeDeformation(0.0F)).texOffs(82, 67)
@@ -199,9 +197,9 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.Head.yRot = netHeadYaw / (180F / (float) Math.PI);
 		this.Head.xRot = headPitch / (180F / (float) Math.PI);
-		this.R_A.xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount;
+		this.R_A.xRot = headPitch / (180F / (float) Math.PI);
 		this.L_L.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 		this.R_L.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
-		this.L_A.xRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
+		this.L_A.xRot = headPitch / (180F / (float) Math.PI);
 	}
 }

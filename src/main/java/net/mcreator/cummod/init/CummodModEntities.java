@@ -17,20 +17,28 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.cummod.entity.BloodEntity;
-import net.mcreator.cummod.entity.BladeEntity;
+import net.mcreator.cummod.entity.BladeridleEntity;
+import net.mcreator.cummod.entity.BladerattackEntity;
 import net.mcreator.cummod.CummodMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CummodModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, CummodMod.MODID);
-	public static final RegistryObject<EntityType<BladeEntity>> BLADE = register("blade",
-			EntityType.Builder.<BladeEntity>of(BladeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(164)
-					.setUpdateInterval(3).setCustomClientFactory(BladeEntity::new).fireImmune().sized(1.5f, 3f));
 	public static final RegistryObject<EntityType<BloodEntity>> BLOOD = register("blood",
 			EntityType.Builder.<BloodEntity>of(BloodEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(3).setCustomClientFactory(BloodEntity::new)
 
 					.sized(1f, 1f));
+	public static final RegistryObject<EntityType<BladeridleEntity>> BLADERIDLE = register("bladeridle",
+			EntityType.Builder.<BladeridleEntity>of(BladeridleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BladeridleEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BladerattackEntity>> BLADERATTACK = register("bladerattack",
+			EntityType.Builder.<BladerattackEntity>of(BladerattackEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BladerattackEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -39,14 +47,16 @@ public class CummodModEntities {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
-			BladeEntity.init();
 			BloodEntity.init();
+			BladeridleEntity.init();
+			BladerattackEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
-		event.put(BLADE.get(), BladeEntity.createAttributes().build());
 		event.put(BLOOD.get(), BloodEntity.createAttributes().build());
+		event.put(BLADERIDLE.get(), BladeridleEntity.createAttributes().build());
+		event.put(BLADERATTACK.get(), BladerattackEntity.createAttributes().build());
 	}
 }

@@ -1,8 +1,0 @@
-{
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "cummod:blocks/meattree_planks",
-    "top": "cummod:blocks/meattree_planks",
-    "side": "cummod:blocks/meattree_planks"
-  }
-}

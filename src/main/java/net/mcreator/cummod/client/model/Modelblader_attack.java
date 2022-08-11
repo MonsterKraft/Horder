@@ -19,10 +19,10 @@ import com.mojang.blaze3d.vertex.PoseStack;
 // Made with Blockbench 4.3.1
 // Exported for Minecraft version 1.17 - 1.18 with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
+public class Modelblader_attack<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("cummod", "modelcustom_model"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("cummod", "modelblader_attack"), "main");
 	public final ModelPart Head;
 	public final ModelPart Body;
 	public final ModelPart L_L;
@@ -30,7 +30,7 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 	public final ModelPart L_A;
 	public final ModelPart R_A;
 
-	public Modelcustom_model(ModelPart root) {
+	public Modelblader_attack(ModelPart root) {
 		this.Head = root.getChild("Head");
 		this.Body = root.getChild("Body");
 		this.L_L = root.getChild("L_L");
@@ -199,9 +199,9 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.Head.yRot = netHeadYaw / (180F / (float) Math.PI);
 		this.Head.xRot = headPitch / (180F / (float) Math.PI);
-		this.R_A.xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount;
+		this.R_A.xRot = ageInTicks;
 		this.L_L.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 		this.R_L.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
-		this.L_A.xRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
+		this.L_A.xRot = ageInTicks;
 	}
 }

@@ -30,8 +30,6 @@ import net.mcreator.cummod.init.CummodModTabs;
 import net.mcreator.cummod.init.CummodModParticleTypes;
 import net.mcreator.cummod.init.CummodModItems;
 import net.mcreator.cummod.init.CummodModEntities;
-import net.mcreator.cummod.init.CummodModBlocks;
-import net.mcreator.cummod.init.CummodModBiomes;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -49,11 +47,10 @@ public class CummodMod {
 	public CummodMod() {
 		CummodModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-		CummodModBlocks.REGISTRY.register(bus);
+
 		CummodModItems.REGISTRY.register(bus);
 		CummodModEntities.REGISTRY.register(bus);
 
-		CummodModBiomes.REGISTRY.register(bus);
 		CummodModParticleTypes.REGISTRY.register(bus);
 	}
 

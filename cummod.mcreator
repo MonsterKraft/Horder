@@ -1,14 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "Blade",
-      "type": "livingentity",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blade"
-    },
-    {
       "name": "BladeThisEntityKillsAnotherOne",
       "type": "procedure",
       "sortid": 16,
@@ -101,202 +93,6 @@
       "registry_name": "bloody_bone"
     },
     {
-      "name": "MeattreeWood",
-      "type": "block",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_wood"
-    },
-    {
-      "name": "MeattreeLog",
-      "type": "block",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_log"
-    },
-    {
-      "name": "MeattreePlanks",
-      "type": "block",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_planks"
-    },
-    {
-      "name": "MeattreeLeaves",
-      "type": "block",
-      "sortid": 12,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_leaves"
-    },
-    {
-      "name": "MeattreeStairs",
-      "type": "block",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_stairs"
-    },
-    {
-      "name": "MeattreeSlab",
-      "type": "block",
-      "sortid": 6,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_slab"
-    },
-    {
-      "name": "MeattreeFence",
-      "type": "block",
-      "sortid": 13,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_fence"
-    },
-    {
-      "name": "MeattreeFenceGate",
-      "type": "block",
-      "sortid": 14,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_fence_gate"
-    },
-    {
-      "name": "MeattreePressurePlate",
-      "type": "block",
-      "sortid": 15,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_pressure_plate"
-    },
-    {
-      "name": "MeattreeButton",
-      "type": "block",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_button"
-    },
-    {
-      "name": "MeattreeItemsTag",
-      "type": "tag",
-      "sortid": 20,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_items_tag"
-    },
-    {
-      "name": "MeattreeWoodRecipe",
-      "type": "recipe",
-      "sortid": 21,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_wood_recipe"
-    },
-    {
-      "name": "MeattreePlanksRecipe",
-      "type": "recipe",
-      "sortid": 22,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_planks_recipe"
-    },
-    {
-      "name": "MeattreeStairsRecipe",
-      "type": "recipe",
-      "sortid": 23,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_stairs_recipe"
-    },
-    {
-      "name": "MeattreeSlabRecipe",
-      "type": "recipe",
-      "sortid": 24,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_slab_recipe"
-    },
-    {
-      "name": "MeattreeFenceRecipe",
-      "type": "recipe",
-      "sortid": 25,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_fence_recipe"
-    },
-    {
-      "name": "MeattreeFenceGateRecipe",
-      "type": "recipe",
-      "sortid": 26,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_fence_gate_recipe"
-    },
-    {
-      "name": "MeattreePressurePlateRecipe",
-      "type": "recipe",
-      "sortid": 27,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_pressure_plate_recipe"
-    },
-    {
-      "name": "MeattreeButtonRecipe",
-      "type": "recipe",
-      "sortid": 28,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_button_recipe"
-    },
-    {
-      "name": "MeattreeStickRecipe",
-      "type": "recipe",
-      "sortid": 29,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meattree_stick_recipe"
-    },
-    {
-      "name": "Bones",
-      "type": "block",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bones",
-      "path": "~/biomes"
-    },
-    {
-      "name": "Grass",
-      "type": "block",
-      "sortid": 9,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "grass",
-      "path": "~/biomes"
-    },
-    {
-      "name": "Meat",
-      "type": "biome",
-      "sortid": 30,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meat",
-      "path": "~/biomes"
-    },
-    {
-      "name": "Ds",
-      "type": "block",
-      "sortid": 31,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meat",
-      "path": "~/biomes"
-    },
-    {
       "name": "Blood",
       "type": "livingentity",
       "sortid": 32,
@@ -383,43 +179,82 @@
           }
         ]
       }
+    },
+    {
+      "name": "Bladeridle",
+      "type": "livingentity",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bladeridle"
+    },
+    {
+      "name": "Bladerattack",
+      "type": "livingentity",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bladerattack"
+    },
+    {
+      "name": "BladerattackPriObnovlieniiTaktaSushchnosti",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bladerattack_pri_obnovlienii_takta_sushchnosti",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BladeridlePriObnovlieniiTaktaSushchnosti",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bladeridle_pri_obnovlienii_takta_sushchnosti",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.cummod.meattree_planks": "Meattree Planks",
-      "block.cummod.meattree_fence": "Meattree Fence",
-      "block.cummod.meattree_fence_gate": "Meattree Fence Gate",
-      "block.cummod.meattree_wood": "Meattree Wood",
-      "biome.cummod.meat": "Meat",
+      "entity.cummod.bladerattack": "Blader",
+      "item.cummod.bladeridle_spawn_egg": "Blader Spawn Egg",
+      "item.cummod.blood_spawn_egg": "Blood Spawn Egg",
       "item.cummod.bloodypiece": "Bloodypiece",
-      "block.cummod.meattree_leaves": "Meattree Leaves",
-      "block.cummod.meattree_button": "Meattree Button",
+      "entity.cummod.blood": "Blood",
       "item.cummod.bloody_bone": "Bloody Bone",
       "itemGroup.tabhord": "Hord",
-      "block.cummod.meattree_stairs": "Meattree Stairs",
-      "block.cummod.meattree_pressure_plate": "Meattree Pressure Plate",
-      "block.cummod.bones": "Bones",
-      "item.cummod.blade_spawn_egg": "Blader Spawn Egg",
-      "block.cummod.meat": "Ds",
-      "block.cummod.meattree_slab": "Meattree Slab",
-      "entity.cummod.blade": "Blader",
-      "item.cummod.blood_spawn_egg": "Blood Spawn Egg",
-      "entity.cummod.blood": "Blood",
-      "block.cummod.grass": "Grass",
-      "block.cummod.meattree_log": "Meattree Log"
+      "entity.cummod.bladeridle": "Blader",
+      "item.cummod.bladerattack_spawn_egg": "Blader Spawn Egg"
     }
   },
   "foldersRoot": {
     "name": "~",
-    "children": [
-      {
-        "name": "biomes",
-        "children": []
-      }
-    ]
+    "children": []
   },
   "workspaceSettings": {
     "modid": "cummod",
