@@ -4,7 +4,12 @@ package net.mcreator.cummod.entity;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -13,25 +18,34 @@ import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.cummod.procedures.BladeridlePriObnovlieniiTaktaSushchnostiProcedure;
+import net.mcreator.cummod.procedures.SaweridlePriObnovlieniiTaktaSushchnostiProcedure;
 import net.mcreator.cummod.init.CummodModEntities;
 
-public class BladeridleEntity extends Monster {
-	public BladeridleEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(CummodModEntities.BLADERIDLE.get(), world);
+@Mod.EventBusSubscriber
+public class SaweridleEntity extends Monster {
+	@SubscribeEvent
+	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
+		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(CummodModEntities.SAWERIDLE.get(), 20, 4, 4));
 	}
 
-	public BladeridleEntity(EntityType<BladeridleEntity> type, Level world) {
+	public SaweridleEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(CummodModEntities.SAWERIDLE.get(), world);
+	}
+
+	public SaweridleEntity(EntityType<SaweridleEntity> type, Level world) {
 		super(type, world);
-		xpReward = 10;
+		xpReward = 0;
 		setNoAi(false);
 	}
 
@@ -65,34 +79,23 @@ public class BladeridleEntity extends Monster {
 	}
 
 	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source == DamageSource.DROWN)
-			return false;
-		if (source == DamageSource.DRAGON_BREATH)
-			return false;
-		if (source == DamageSource.WITHER)
-			return false;
-		if (source.getMsgId().equals("witherSkull"))
-			return false;
-		return super.hurt(source, amount);
-	}
-
-	@Override
 	public void baseTick() {
 		super.baseTick();
-		BladeridlePriObnovlieniiTaktaSushchnostiProcedure.execute(this.level, this);
+		SaweridlePriObnovlieniiTaktaSushchnostiProcedure.execute(this.level, this);
 	}
 
 	public static void init() {
+		SpawnPlacements.register(CummodModEntities.SAWERIDLE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
+						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.2);
-		builder = builder.add(Attributes.MAX_HEALTH, 25);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
+		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		return builder;
 	}
 }

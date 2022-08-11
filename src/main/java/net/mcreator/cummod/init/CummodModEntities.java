@@ -16,6 +16,8 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.cummod.entity.SaweridleEntity;
+import net.mcreator.cummod.entity.SawerattackEntity;
 import net.mcreator.cummod.entity.BloodEntity;
 import net.mcreator.cummod.entity.BladeridleEntity;
 import net.mcreator.cummod.entity.BladerattackEntity;
@@ -39,6 +41,16 @@ public class CummodModEntities {
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BladerattackEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SawerattackEntity>> SAWERATTACK = register("sawerattack",
+			EntityType.Builder.<SawerattackEntity>of(SawerattackEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SawerattackEntity::new)
+
+					.sized(3f, 3f));
+	public static final RegistryObject<EntityType<SaweridleEntity>> SAWERIDLE = register("saweridle",
+			EntityType.Builder.<SaweridleEntity>of(SaweridleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SaweridleEntity::new)
+
+					.sized(3f, 3f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -50,6 +62,8 @@ public class CummodModEntities {
 			BloodEntity.init();
 			BladeridleEntity.init();
 			BladerattackEntity.init();
+			SawerattackEntity.init();
+			SaweridleEntity.init();
 		});
 	}
 
@@ -58,5 +72,7 @@ public class CummodModEntities {
 		event.put(BLOOD.get(), BloodEntity.createAttributes().build());
 		event.put(BLADERIDLE.get(), BladeridleEntity.createAttributes().build());
 		event.put(BLADERATTACK.get(), BladerattackEntity.createAttributes().build());
+		event.put(SAWERATTACK.get(), SawerattackEntity.createAttributes().build());
+		event.put(SAWERIDLE.get(), SaweridleEntity.createAttributes().build());
 	}
 }

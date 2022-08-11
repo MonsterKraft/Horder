@@ -11,11 +11,11 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 
 import net.mcreator.cummod.init.CummodModEntities;
-import net.mcreator.cummod.entity.BladeridleEntity;
+import net.mcreator.cummod.entity.SawerattackEntity;
 
 import java.util.Comparator;
 
-public class BladerattackPriObnovlieniiTaktaSushchnostiProcedure {
+public class SaweridlePriObnovlieniiTaktaSushchnostiProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
@@ -30,9 +30,9 @@ public class BladerattackPriObnovlieniiTaktaSushchnostiProcedure {
 		double oxygen = 0;
 		double yaw = 0;
 		if (!world.isClientSide()) {
-			if (!(!world
+			if (!world
 					.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 16, 16, 16), e -> true)
-					.isEmpty())) {
+					.isEmpty()) {
 				yaw = entity.getYRot();
 				pitch = entity.getXRot();
 				posX = entity.getX();
@@ -44,17 +44,17 @@ public class BladerattackPriObnovlieniiTaktaSushchnostiProcedure {
 				health = entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1;
 				oxygen = entity.getAirSupply();
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new BladeridleEntity(CummodModEntities.BLADERIDLE.get(), _level);
+					Entity entityToSpawn = new SawerattackEntity(CummodModEntities.SAWERATTACK.get(), _level);
 					entityToSpawn.moveTo(posX, posY, posZ, world.getRandom().nextFloat() * 360F, 0);
 					if (entityToSpawn instanceof Mob _mobToSpawn)
 						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED,
 								null, null);
 					world.addFreshEntity(entityToSpawn);
 				}
-				if (!world.getEntitiesOfClass(BladeridleEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true).isEmpty()) {
+				if (!world.getEntitiesOfClass(SawerattackEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true).isEmpty()) {
 					{
 						Entity _ent = ((Entity) world
-								.getEntitiesOfClass(BladeridleEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true).stream()
+								.getEntitiesOfClass(SawerattackEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true).stream()
 								.sorted(new Object() {
 									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 										return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
@@ -71,20 +71,20 @@ public class BladerattackPriObnovlieniiTaktaSushchnostiProcedure {
 							_entity.yHeadRotO = _entity.getYRot();
 						}
 					}
-					((Entity) world.getEntitiesOfClass(BladeridleEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true)
+					((Entity) world.getEntitiesOfClass(SawerattackEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true)
 							.stream().sorted(new Object() {
 								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 									return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 								}
 							}.compareDistOf(posX, posY, posZ)).findFirst().orElse(null)).setDeltaMovement(new Vec3(velocityX, velocityY, velocityZ));
-					if (((Entity) world.getEntitiesOfClass(BladeridleEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true)
+					if (((Entity) world.getEntitiesOfClass(SawerattackEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true)
 							.stream().sorted(new Object() {
 								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 									return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 								}
 							}.compareDistOf(posX, posY, posZ)).findFirst().orElse(null)) instanceof LivingEntity _entity)
 						_entity.setHealth((float) health);
-					((Entity) world.getEntitiesOfClass(BladeridleEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true)
+					((Entity) world.getEntitiesOfClass(SawerattackEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true)
 							.stream().sorted(new Object() {
 								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 									return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));

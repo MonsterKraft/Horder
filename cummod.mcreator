@@ -243,32 +243,97 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "meatty_baton"
+    },
+    {
+      "name": "SawerattackPriObnovlieniiTaktaSushchnosti",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sawerattack_pri_obnovlienii_takta_sushchnosti",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Saweridle",
+      "type": "livingentity",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "saweridle"
+    },
+    {
+      "name": "Sawerattack",
+      "type": "livingentity",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sawerattack"
+    },
+    {
+      "name": "SaweridlePriObnovlieniiTaktaSushchnosti",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "saweridle_pri_obnovlienii_takta_sushchnosti",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.cummod.meattree_planks": "Meattree Planks",
-      "block.cummod.meattree_fence": "Meattree Fence",
-      "block.cummod.meattree_fence_gate": "Meattree Fence Gate",
       "block.cummod.meattree_wood": "Meattree Wood",
-      "biome.cummod.meat": "Meat",
       "item.cummod.bloodypiece": "Bloodypiece",
-      "block.cummod.meattree_leaves": "Meattree Leaves",
-      "block.cummod.meattree_button": "Meattree Button",
-      "item.cummod.bloody_bone": "Bloody Bone",
       "itemGroup.tabhord": "Hord",
       "block.cummod.meattree_stairs": "Meattree Stairs",
       "block.cummod.meattree_pressure_plate": "Meattree Pressure Plate",
+      "item.cummod.saweridle_spawn_egg": "Saweridle Spawn Egg",
+      "entity.cummod.saweridle": "Saweridle",
       "block.cummod.bones": "Bones",
       "item.cummod.blade_spawn_egg": "Blader Spawn Egg",
-      "block.cummod.meat": "Ds",
-      "block.cummod.meattree_slab": "Meattree Slab",
-      "entity.cummod.blade": "Blader",
-      "item.cummod.blood_spawn_egg": "Blood Spawn Egg",
+      "item.cummod.bladeridle_spawn_egg": "Blader Spawn Egg",
       "entity.cummod.blood": "Blood",
       "block.cummod.grass": "Grass",
+      "block.cummod.meattree_planks": "Meattree Planks",
+      "entity.cummod.bladerattack": "Blader",
+      "block.cummod.meattree_fence": "Meattree Fence",
+      "block.cummod.meattree_fence_gate": "Meattree Fence Gate",
+      "biome.cummod.meat": "Meat",
+      "block.cummod.meattree_leaves": "Meattree Leaves",
+      "block.cummod.meattree_button": "Meattree Button",
+      "item.cummod.bloody_bone": "Bloody Bone",
+      "item.cummod.bladerattack_spawn_egg": "Blader Spawn Egg",
+      "entity.cummod.bladeridle": "Blader",
+      "item.cummod.sawerattack_spawn_egg": "Sawerattack Spawn Egg",
+      "entity.cummod.sawerattack": "Sawerattack",
+      "block.cummod.meat": "Ds",
+      "block.cummod.meattree_slab": "Meattree Slab",
+      "item.cummod.meatty_baton": "Meatty Baton",
+      "entity.cummod.blade": "Blader",
+      "item.cummod.blood_spawn_egg": "Blood Spawn Egg",
       "block.cummod.meattree_log": "Meattree Log"
     }
   },

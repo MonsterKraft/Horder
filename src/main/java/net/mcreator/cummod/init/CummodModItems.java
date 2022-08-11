@@ -25,4 +25,6 @@ public class CummodModItems {
 	public static final RegistryObject<Item> BLADERIDLE = REGISTRY.register("bladeridle_spawn_egg",
 			() -> new ForgeSpawnEggItem(CummodModEntities.BLADERIDLE, -6750208, -10092544, new Item.Properties().tab(CummodModTabs.TAB_HORD)));
 	public static final RegistryObject<Item> MEATTY_BATON = REGISTRY.register("meatty_baton", () -> new MeattyBatonItem());
+	public static final RegistryObject<Item> SAWERIDLE = REGISTRY.register("saweridle_spawn_egg",
+			() -> new ForgeSpawnEggItem(CummodModEntities.SAWERIDLE, -6750208, -13159, new Item.Properties().tab(CummodModTabs.TAB_HORD)));
 }

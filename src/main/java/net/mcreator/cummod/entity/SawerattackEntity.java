@@ -4,12 +4,7 @@ package net.mcreator.cummod.entity;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.npc.Villager;
@@ -21,38 +16,28 @@ import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.cummod.procedures.BladerattackPriObnovlieniiTaktaSushchnostiProcedure;
-import net.mcreator.cummod.procedures.BladeThisEntityKillsAnotherOneProcedure;
+import net.mcreator.cummod.procedures.SawerattackPriObnovlieniiTaktaSushchnostiProcedure;
 import net.mcreator.cummod.init.CummodModEntities;
 
-@Mod.EventBusSubscriber
-public class BladerattackEntity extends Monster {
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(CummodModEntities.BLADERATTACK.get(), 20, 4, 4));
+public class SawerattackEntity extends Monster {
+	public SawerattackEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(CummodModEntities.SAWERATTACK.get(), world);
 	}
 
-	public BladerattackEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(CummodModEntities.BLADERATTACK.get(), world);
-	}
-
-	public BladerattackEntity(EntityType<BladerattackEntity> type, Level world) {
+	public SawerattackEntity(EntityType<SawerattackEntity> type, Level world) {
 		super(type, world);
-		xpReward = 10;
+		xpReward = 20;
 		setNoAi(false);
+		setPersistenceRequired();
 	}
 
 	@Override
@@ -69,7 +54,7 @@ public class BladerattackEntity extends Monster {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
-		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
+		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
@@ -79,6 +64,11 @@ public class BladerattackEntity extends Monster {
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
 	}
 
 	@Override
@@ -92,45 +82,20 @@ public class BladerattackEntity extends Monster {
 	}
 
 	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source == DamageSource.CACTUS)
-			return false;
-		if (source == DamageSource.DROWN)
-			return false;
-		if (source == DamageSource.DRAGON_BREATH)
-			return false;
-		if (source == DamageSource.WITHER)
-			return false;
-		if (source.getMsgId().equals("witherSkull"))
-			return false;
-		return super.hurt(source, amount);
-	}
-
-	@Override
-	public void awardKillScore(Entity entity, int score, DamageSource damageSource) {
-		super.awardKillScore(entity, score, damageSource);
-		BladeThisEntityKillsAnotherOneProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
-	}
-
-	@Override
 	public void baseTick() {
 		super.baseTick();
-		BladerattackPriObnovlieniiTaktaSushchnostiProcedure.execute(this.level, this);
+		SawerattackPriObnovlieniiTaktaSushchnostiProcedure.execute(this.level, this);
 	}
 
 	public static void init() {
-		SpawnPlacements.register(CummodModEntities.BLADERATTACK.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
-						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 25);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.2);
+		builder = builder.add(Attributes.MAX_HEALTH, 40);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 6);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 1);
 		return builder;
 	}
 }

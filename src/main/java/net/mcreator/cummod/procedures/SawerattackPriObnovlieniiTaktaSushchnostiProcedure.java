@@ -11,11 +11,11 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 
 import net.mcreator.cummod.init.CummodModEntities;
-import net.mcreator.cummod.entity.BladeridleEntity;
+import net.mcreator.cummod.entity.SaweridleEntity;
 
 import java.util.Comparator;
 
-public class BladerattackPriObnovlieniiTaktaSushchnostiProcedure {
+public class SawerattackPriObnovlieniiTaktaSushchnostiProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
@@ -44,17 +44,17 @@ public class BladerattackPriObnovlieniiTaktaSushchnostiProcedure {
 				health = entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1;
 				oxygen = entity.getAirSupply();
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new BladeridleEntity(CummodModEntities.BLADERIDLE.get(), _level);
+					Entity entityToSpawn = new SaweridleEntity(CummodModEntities.SAWERIDLE.get(), _level);
 					entityToSpawn.moveTo(posX, posY, posZ, world.getRandom().nextFloat() * 360F, 0);
 					if (entityToSpawn instanceof Mob _mobToSpawn)
 						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED,
 								null, null);
 					world.addFreshEntity(entityToSpawn);
 				}
-				if (!world.getEntitiesOfClass(BladeridleEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true).isEmpty()) {
+				if (!world.getEntitiesOfClass(SaweridleEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true).isEmpty()) {
 					{
 						Entity _ent = ((Entity) world
-								.getEntitiesOfClass(BladeridleEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true).stream()
+								.getEntitiesOfClass(SaweridleEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true).stream()
 								.sorted(new Object() {
 									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 										return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
@@ -71,21 +71,21 @@ public class BladerattackPriObnovlieniiTaktaSushchnostiProcedure {
 							_entity.yHeadRotO = _entity.getYRot();
 						}
 					}
-					((Entity) world.getEntitiesOfClass(BladeridleEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true)
-							.stream().sorted(new Object() {
+					((Entity) world.getEntitiesOfClass(SaweridleEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true).stream()
+							.sorted(new Object() {
 								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 									return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 								}
 							}.compareDistOf(posX, posY, posZ)).findFirst().orElse(null)).setDeltaMovement(new Vec3(velocityX, velocityY, velocityZ));
-					if (((Entity) world.getEntitiesOfClass(BladeridleEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true)
+					if (((Entity) world.getEntitiesOfClass(SaweridleEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true)
 							.stream().sorted(new Object() {
 								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 									return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 								}
 							}.compareDistOf(posX, posY, posZ)).findFirst().orElse(null)) instanceof LivingEntity _entity)
 						_entity.setHealth((float) health);
-					((Entity) world.getEntitiesOfClass(BladeridleEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true)
-							.stream().sorted(new Object() {
+					((Entity) world.getEntitiesOfClass(SaweridleEntity.class, AABB.ofSize(new Vec3(posX, posY, posZ), 16, 16, 16), e -> true).stream()
+							.sorted(new Object() {
 								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 									return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 								}

@@ -9,6 +9,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.cummod.client.renderer.SaweridleRenderer;
+import net.mcreator.cummod.client.renderer.SawerattackRenderer;
 import net.mcreator.cummod.client.renderer.BloodRenderer;
 import net.mcreator.cummod.client.renderer.BladeridleRenderer;
 import net.mcreator.cummod.client.renderer.BladerattackRenderer;
@@ -20,5 +22,7 @@ public class CummodModEntityRenderers {
 		event.registerEntityRenderer(CummodModEntities.BLOOD.get(), BloodRenderer::new);
 		event.registerEntityRenderer(CummodModEntities.BLADERIDLE.get(), BladeridleRenderer::new);
 		event.registerEntityRenderer(CummodModEntities.BLADERATTACK.get(), BladerattackRenderer::new);
+		event.registerEntityRenderer(CummodModEntities.SAWERATTACK.get(), SawerattackRenderer::new);
+		event.registerEntityRenderer(CummodModEntities.SAWERIDLE.get(), SaweridleRenderer::new);
 	}
 }
