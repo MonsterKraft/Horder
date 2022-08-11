@@ -10,7 +10,7 @@ import net.mcreator.cummod.client.model.ModelSawer_attack;
 
 public class SawerattackRenderer extends MobRenderer<SawerattackEntity, ModelSawer_attack<SawerattackEntity>> {
 	public SawerattackRenderer(EntityRendererProvider.Context context) {
-		super(context, new ModelSawer_attack(context.bakeLayer(ModelSawer_attack.LAYER_LOCATION)), 1f);
+		super(context, new ModelSawer_attack(context.bakeLayer(ModelSawer_attack.LAYER_LOCATION)), 3f);
 	}
 
 	@Override
