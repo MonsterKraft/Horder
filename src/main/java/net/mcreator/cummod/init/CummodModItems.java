@@ -11,6 +11,7 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 
 import net.minecraft.world.item.Item;
 
+import net.mcreator.cummod.item.MeattyBatonItem;
 import net.mcreator.cummod.item.BloodypieceItem;
 import net.mcreator.cummod.item.BloodyBoneItem;
 import net.mcreator.cummod.CummodMod;
@@ -23,4 +24,5 @@ public class CummodModItems {
 			() -> new ForgeSpawnEggItem(CummodModEntities.BLOOD, -5043959, -11203315, new Item.Properties().tab(CummodModTabs.TAB_HORD)));
 	public static final RegistryObject<Item> BLADERIDLE = REGISTRY.register("bladeridle_spawn_egg",
 			() -> new ForgeSpawnEggItem(CummodModEntities.BLADERIDLE, -6750208, -10092544, new Item.Properties().tab(CummodModTabs.TAB_HORD)));
+	public static final RegistryObject<Item> MEATTY_BATON = REGISTRY.register("meatty_baton", () -> new MeattyBatonItem());
 }

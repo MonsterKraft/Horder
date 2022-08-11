@@ -181,20 +181,40 @@
       }
     },
     {
-      "name": "Bladeridle",
-      "type": "livingentity",
-      "sortid": 38,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bladeridle"
-    },
-    {
       "name": "Bladerattack",
       "type": "livingentity",
       "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bladerattack"
+    },
+    {
+      "name": "BladeridlePriObnovlieniiTaktaSushchnosti",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bladeridle_pri_obnovlienii_takta_sushchnosti",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bladeridle",
+      "type": "livingentity",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bladeridle"
     },
     {
       "name": "BladerattackPriObnovlieniiTaktaSushchnosti",
@@ -217,39 +237,39 @@
       }
     },
     {
-      "name": "BladeridlePriObnovlieniiTaktaSushchnosti",
-      "type": "procedure",
-      "sortid": 39,
+      "name": "MeattyBaton",
+      "type": "tool",
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "bladeridle_pri_obnovlienii_takta_sushchnosti",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
+      "registry_name": "meatty_baton"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "entity.cummod.bladerattack": "Blader",
-      "item.cummod.bladeridle_spawn_egg": "Blader Spawn Egg",
-      "item.cummod.blood_spawn_egg": "Blood Spawn Egg",
+      "block.cummod.meattree_planks": "Meattree Planks",
+      "block.cummod.meattree_fence": "Meattree Fence",
+      "block.cummod.meattree_fence_gate": "Meattree Fence Gate",
+      "block.cummod.meattree_wood": "Meattree Wood",
+      "biome.cummod.meat": "Meat",
       "item.cummod.bloodypiece": "Bloodypiece",
-      "entity.cummod.blood": "Blood",
+      "block.cummod.meattree_leaves": "Meattree Leaves",
+      "block.cummod.meattree_button": "Meattree Button",
       "item.cummod.bloody_bone": "Bloody Bone",
       "itemGroup.tabhord": "Hord",
-      "entity.cummod.bladeridle": "Blader",
-      "item.cummod.bladerattack_spawn_egg": "Blader Spawn Egg"
+      "block.cummod.meattree_stairs": "Meattree Stairs",
+      "block.cummod.meattree_pressure_plate": "Meattree Pressure Plate",
+      "block.cummod.bones": "Bones",
+      "item.cummod.blade_spawn_egg": "Blader Spawn Egg",
+      "block.cummod.meat": "Ds",
+      "block.cummod.meattree_slab": "Meattree Slab",
+      "entity.cummod.blade": "Blader",
+      "item.cummod.blood_spawn_egg": "Blood Spawn Egg",
+      "entity.cummod.blood": "Blood",
+      "block.cummod.grass": "Grass",
+      "block.cummod.meattree_log": "Meattree Log"
     }
   },
   "foldersRoot": {
