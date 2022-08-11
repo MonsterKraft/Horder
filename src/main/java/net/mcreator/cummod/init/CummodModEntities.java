@@ -45,12 +45,12 @@ public class CummodModEntities {
 			EntityType.Builder.<SawerattackEntity>of(SawerattackEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SawerattackEntity::new)
 
-					.sized(3f, 3f));
+					.sized(2f, 3f));
 	public static final RegistryObject<EntityType<SaweridleEntity>> SAWERIDLE = register("saweridle",
 			EntityType.Builder.<SaweridleEntity>of(SaweridleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SaweridleEntity::new)
 
-					.sized(3f, 3f));
+					.sized(2f, 3f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

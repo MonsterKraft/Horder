@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "cummod:bladeridle",
+    "cummod:bladerattack",
+    "cummod:sawerattack",
+    "cummod:saweridle",
+    "cummod:blood"
+  ]
+}

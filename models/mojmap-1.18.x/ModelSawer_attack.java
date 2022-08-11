@@ -140,9 +140,11 @@ public class ModelSawer_attack<T extends Entity> extends EntityModel<T> {
 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
 			float headPitch) {
+		this.eye.yRot = netHeadYaw / (180F / (float) Math.PI);
+		this.eye.xRot = headPitch / (180F / (float) Math.PI);
 		this.leg2.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
 		this.leg3.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
-		this.saw2.zRot = ageInTicks;
-		this.saw3.zRot = ageInTicks;
+		this.saw2.yRot = ageInTicks;
+		this.saw3.yRot = ageInTicks;
 	}
 }
