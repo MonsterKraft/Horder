@@ -4,8 +4,8 @@
   "definition": {
     "mobName": "Blader",
     "mobLabel": "",
-    "mobModelName": "Modelblader_idle",
-    "mobModelTexture": "drgfa.png",
+    "mobModelName": "ModelBlader_idle",
+    "mobModelTexture": "blader_attack_.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,
