@@ -35,12 +35,12 @@ public class CummodModEntities {
 			EntityType.Builder.<BladeridleEntity>of(BladeridleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BladeridleEntity::new)
 
-					.sized(0.6f, 1.8f));
+					.sized(1f, 2.5f));
 	public static final RegistryObject<EntityType<BladerattackEntity>> BLADERATTACK = register("bladerattack",
 			EntityType.Builder.<BladerattackEntity>of(BladerattackEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BladerattackEntity::new)
 
-					.sized(0.6f, 1.8f));
+					.sized(1f, 2.5f));
 	public static final RegistryObject<EntityType<SawerattackEntity>> SAWERATTACK = register("sawerattack",
 			EntityType.Builder.<SawerattackEntity>of(SawerattackEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SawerattackEntity::new)

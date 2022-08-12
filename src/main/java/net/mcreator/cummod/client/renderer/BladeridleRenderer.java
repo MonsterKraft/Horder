@@ -10,7 +10,7 @@ import net.mcreator.cummod.client.model.ModelBlader_idle;
 
 public class BladeridleRenderer extends MobRenderer<BladeridleEntity, ModelBlader_idle<BladeridleEntity>> {
 	public BladeridleRenderer(EntityRendererProvider.Context context) {
-		super(context, new ModelBlader_idle(context.bakeLayer(ModelBlader_idle.LAYER_LOCATION)), 0.5f);
+		super(context, new ModelBlader_idle(context.bakeLayer(ModelBlader_idle.LAYER_LOCATION)), 1f);
 	}
 
 	@Override

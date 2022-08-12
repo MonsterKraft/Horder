@@ -10,7 +10,7 @@ import net.mcreator.cummod.client.model.ModelBlader_attack;
 
 public class BladerattackRenderer extends MobRenderer<BladerattackEntity, ModelBlader_attack<BladerattackEntity>> {
 	public BladerattackRenderer(EntityRendererProvider.Context context) {
-		super(context, new ModelBlader_attack(context.bakeLayer(ModelBlader_attack.LAYER_LOCATION)), 0.5f);
+		super(context, new ModelBlader_attack(context.bakeLayer(ModelBlader_attack.LAYER_LOCATION)), 1f);
 	}
 
 	@Override
