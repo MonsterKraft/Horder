@@ -10,7 +10,7 @@ import net.mcreator.cummod.client.model.ModelSawer_idle;
 
 public class SaweridleRenderer extends MobRenderer<SaweridleEntity, ModelSawer_idle<SaweridleEntity>> {
 	public SaweridleRenderer(EntityRendererProvider.Context context) {
-		super(context, new ModelSawer_idle(context.bakeLayer(ModelSawer_idle.LAYER_LOCATION)), 1f);
+		super(context, new ModelSawer_idle(context.bakeLayer(ModelSawer_idle.LAYER_LOCATION)), 2f);
 	}
 
 	@Override

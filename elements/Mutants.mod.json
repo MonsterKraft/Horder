@@ -1,0 +1,29 @@
+{
+  "_fv": 28,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:Bladerattack"
+      },
+      {
+        "value": "CUSTOM:Bladeridle"
+      },
+      {
+        "value": "CUSTOM:Blood"
+      },
+      {
+        "value": "CUSTOM:Sawerattack"
+      },
+      {
+        "value": "CUSTOM:Saweridle"
+      }
+    ],
+    "name": "mutants",
+    "namespace": "forge"
+  }
+}

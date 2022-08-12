@@ -299,32 +299,97 @@
           }
         ]
       }
+    },
+    {
+      "name": "SawerRage0",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sawer_rage_0",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sawerrage",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sawerrage",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mutants",
+      "type": "tag",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mutants"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "ru_ru": {
-      "block.cummod.meattree_planks": "Meattree Planks",
-      "block.cummod.meattree_fence": "Meattree Fence",
-      "block.cummod.meattree_fence_gate": "Meattree Fence Gate",
       "block.cummod.meattree_wood": "Meattree Wood",
-      "biome.cummod.meat": "Meat",
       "item.cummod.bloodypiece": "Кусок биомассы",
-      "block.cummod.meattree_leaves": "Meattree Leaves",
-      "block.cummod.meattree_button": "Meattree Button",
-      "item.cummod.bloody_bone": "Кровавая кость",
       "itemGroup.tabhord": "Стая",
       "block.cummod.meattree_stairs": "Meattree Stairs",
       "block.cummod.meattree_pressure_plate": "Meattree Pressure Plate",
+      "item.cummod.saweridle_spawn_egg": "Saweridle Spawn Egg",
+      "entity.cummod.saweridle": "Saweridle",
       "block.cummod.bones": "Bones",
-      "item.cummod.blade_spawn_egg": "Яйцо призыва - Кромсатель",
-      "block.cummod.meat": "Ds",
-      "block.cummod.meattree_slab": "Meattree Slab",
-      "entity.cummod.blade": "Кромсатель",
-      "item.cummod.blood_spawn_egg": "Яйцо призыва - Биомасса",
+      "item.cummod.blade_spawn_egg": "Яйцо призыва - Резак",
+      "item.cummod.bladeridle_spawn_egg": "Blader Spawn Egg",
       "entity.cummod.blood": "Биомасса",
       "block.cummod.grass": "Grass",
+      "block.cummod.meattree_planks": "Meattree Planks",
+      "entity.cummod.bladerattack": "Blader",
+      "block.cummod.meattree_fence": "Meattree Fence",
+      "block.cummod.meattree_fence_gate": "Meattree Fence Gate",
+      "biome.cummod.meat": "Meat",
+      "block.cummod.meattree_leaves": "Meattree Leaves",
+      "block.cummod.meattree_button": "Meattree Button",
+      "item.cummod.bloody_bone": "Кровавая кость",
+      "item.cummod.bladerattack_spawn_egg": "Blader Spawn Egg",
+      "entity.cummod.bladeridle": "Blader",
+      "item.cummod.sawerattack_spawn_egg": "Sawerattack Spawn Egg",
+      "entity.cummod.sawerattack": "Sawerattack",
+      "block.cummod.meat": "Ds",
+      "block.cummod.meattree_slab": "Meattree Slab",
+      "item.cummod.meatty_baton": "Meatty Baton",
+      "entity.cummod.blade": "Резак",
+      "item.cummod.blood_spawn_egg": "Яйцо призыва - Биомасса",
       "block.cummod.meattree_log": "Meattree Log"
     },
     "en_us": {

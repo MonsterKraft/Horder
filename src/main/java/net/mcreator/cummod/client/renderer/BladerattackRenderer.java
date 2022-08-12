@@ -6,15 +6,15 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 import net.mcreator.cummod.entity.BladerattackEntity;
-import net.mcreator.cummod.client.model.Modelblader_attack;
+import net.mcreator.cummod.client.model.ModelBlader_attack;
 
-public class BladerattackRenderer extends MobRenderer<BladerattackEntity, Modelblader_attack<BladerattackEntity>> {
+public class BladerattackRenderer extends MobRenderer<BladerattackEntity, ModelBlader_attack<BladerattackEntity>> {
 	public BladerattackRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modelblader_attack(context.bakeLayer(Modelblader_attack.LAYER_LOCATION)), 0.5f);
+		super(context, new ModelBlader_attack(context.bakeLayer(ModelBlader_attack.LAYER_LOCATION)), 1f);
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(BladerattackEntity entity) {
-		return new ResourceLocation("cummod:textures/drgfa.png");
+		return new ResourceLocation("cummod:textures/blader_attack_.png");
 	}
 }
